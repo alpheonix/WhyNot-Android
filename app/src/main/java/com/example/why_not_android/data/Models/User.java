@@ -1,19 +1,19 @@
 package com.example.why_not_android.data.Models;
 
 public class User {
-    private String _id;
+    private  String _id;
     private String email;
-    private String username;
-    private String photo;
-    private String birthdate;
+    private  String username;
+    private  String photo;
+    private  String birthdate;
     private String sexe;
     private int preference;
-    private String bio;
+    private  String bio;
     private String createdAt;
     private String isDeleted;
     private String banned;
 
-    public String get_id() {
+    public  String get_id() {
         return _id;
     }
 
@@ -29,7 +29,7 @@ public class User {
         this.email = email;
     }
 
-    public String getUsername() {
+    public  String getUsername() {
         return username;
     }
 
@@ -37,7 +37,7 @@ public class User {
         this.username = username;
     }
 
-    public String getPhoto() {
+    public  String getPhoto() {
         return photo;
     }
 
@@ -45,7 +45,7 @@ public class User {
         this.photo = photo;
     }
 
-    public String getBirthdate() {
+    public  String getBirthdate() {
         return birthdate;
     }
 
@@ -69,7 +69,7 @@ public class User {
         this.preference = preference;
     }
 
-    public String getBio() {
+    public  String getBio() {
         return bio;
     }
 

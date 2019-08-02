@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".views.Signup3Activity">
+
+    <TextView
+        android:id="@+id/signup4FilmTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/film"
+        android:textColor="@color/redCharte"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/photoButton" />
+
+    <RadioGroup
+        android:id="@+id/signup4radioGroupFilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonScienceFiction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/science_fiction"
+            android:textColor="@color/blueCharte" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action"
+            android:textColor="@color/blueCharte" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonFantasie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fantasie"
+            android:textColor="@color/blueCharte" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonDocumantaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/documantaire"
+            android:textColor="@color/blueCharte" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/signup4MusiqueTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/musique"
+        android:textColor="@color/redCharte"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/photoButton" />
+
+    <RadioGroup
+        android:id="@+id/signup4radioGroupMusique"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonRock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rock"
+            android:textColor="@color/redCharte" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonRap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rap"
+            android:textColor="@color/redCharte" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonPop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pop"
+            android:textColor="@color/redCharte" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonClassique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/classique"
+            android:textColor="@color/redCharte" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/signup4ActivitéTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/activit"
+        android:textColor="@color/redCharte"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/photoButton" />
+
+    <RadioGroup
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonMusée"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mus_e"
+            android:textColor="@color/cardview_light_background" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonVoyage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voyage"
+            android:textColor="@color/cardview_light_background" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonCinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cinema"
+            android:textColor="@color/cardview_light_background" />
+
+        <RadioButton
+            android:id="@+id/signup4radioButtonSport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sport"
+            android:textColor="@color/cardview_light_background" />
+
+    </RadioGroup>
+
+
+
+
+
+    <Button
+        android:id="@+id/signup2Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/blueCharte"
+        android:text="@string/valider"
+        android:textColor="@color/redCharte" />
+
+</LinearLayout>

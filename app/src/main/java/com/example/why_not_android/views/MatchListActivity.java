@@ -80,6 +80,7 @@ public class MatchListActivity extends MenuActivity implements NavigationView.On
             @Override
             public void onSuccess(List<User> data) {
                 if (data.size() > 0) {
+
                     matchAdapter.setEventList(data);
                 } else {
 

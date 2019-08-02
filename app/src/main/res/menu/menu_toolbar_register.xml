@@ -6,7 +6,11 @@
         android:id="@+id/action_register"
         android:enabled="true"
         android:title="@string/inscription"
-
-        app:showAsAction="ifRoom" />
+/>
+    <item
+        android:id="@+id/action_unregister"
+        android:enabled="true"
+        android:title="@string/desinscription"
+/>
 
 </menu>

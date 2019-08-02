@@ -31,7 +31,7 @@ public class NetworkProvider {
     private static NetworkProvider instance;
     private static Retrofit retrofit = null;
     private final static String localBaseUrl = "http://10.0.2.2:3000/";
-    private final static String prodBaseUrl = "https://whynot-api.herokuapp.com/";
+    private final static String prodBaseUrl = "https://why-not-api.herokuapp.com/";
 
     public static NetworkProvider getInstance() {
         if (instance == null) {
@@ -43,7 +43,7 @@ public class NetworkProvider {
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(prodBaseUrl)
+                    .baseUrl(localBaseUrl)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
@@ -51,7 +51,7 @@ public class NetworkProvider {
     }
 
     private NetworkProvider() {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(prodBaseUrl)
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(localBaseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         eventService = retrofit.create(EventService.class);

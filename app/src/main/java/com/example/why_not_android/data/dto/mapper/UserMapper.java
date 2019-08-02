@@ -8,12 +8,12 @@ import java.util.List;
 
 public class UserMapper {
 
-    public static List<User> map(List<UserDTO> eventDTOList) {
-        List<User> eventList = new ArrayList<>();
-        for (UserDTO userDTO : eventDTOList) {
-            eventList.add(map(userDTO));
+    public static List<User> map(List<UserDTO> userDTOList) {
+        List<User> userList = new ArrayList<>();
+        for (UserDTO userDTO : userDTOList) {
+            userList.add(map(userDTO));
         }
-        return eventList;
+        return userList;
     }
 
     private static User map(UserDTO userDTO) {

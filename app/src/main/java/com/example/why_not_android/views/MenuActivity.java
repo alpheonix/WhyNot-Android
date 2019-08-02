@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.why_not_android.R;
+import com.example.why_not_android.data.Models.User;
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -38,6 +39,10 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(home);
                 break;
             case R.id.drawer_menu_my_profil:
+
+                Intent intent = new Intent(MenuActivity.this, DetailUser.class);
+
+                startActivity(intent);
                 break;
             case R.id.drawer_menu_event:
                 Intent event = new Intent(MenuActivity.this, EventList.class);
@@ -53,8 +58,10 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(matchList);
                 break;
             case R.id.drawer_menu_logout:
+                Intent logout = new Intent(MenuActivity.this, MainActivity.class);
+                startActivity(logout);
                 break;
-            case R.id.drawer_menu_leave_application:
+            default:
                 break;
         }
         

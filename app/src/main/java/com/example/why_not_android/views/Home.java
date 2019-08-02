@@ -91,7 +91,7 @@ public class Home extends MenuActivity implements NavigationView.OnNavigationIte
                     if (response.body().size() != 0) {
                         userDTOList = response.body();
                         UserDTO userDTO = userDTOList.get(0);
-                        textView.setText(userDTO.getUsername() + "\n" + userDTO.getPreference());
+                        textView.setText(userDTO.getUsername() + "\n" + userDTO.getBirthdate());
                         String url = userDTO.getPhoto();
                         Log.d("toz", url);
                         //url = url.replace("localhost", "10.0.2.2");
@@ -153,6 +153,7 @@ public class Home extends MenuActivity implements NavigationView.OnNavigationIte
                         ViewDialog matchDialog = new ViewDialog();
                         String username = userDTOList.get(0).getUsername();
                         String imageURL = userDTOList.get(0).getPhoto();
+                        setViewed(id);
                         cleanUserList();
                         matchDialog.showDialog(Home.this, username, imageURL, userDTOList);
                     } else {
@@ -221,7 +222,7 @@ public class Home extends MenuActivity implements NavigationView.OnNavigationIte
         }
     }
 
-    @OnClick(R.id.activity_home_iv)
+    @OnClick(R.id.activity_home_user_description_tv)
     void detail() {
         Intent intent = new Intent(Home.this, DetailUser.class);
         intent.putExtra("userName", userDTOList.get(0).getUsername());

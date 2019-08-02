@@ -60,79 +60,6 @@ public class Signup3Activity extends AppCompatActivity {
         });
     }
 
-    private void signup(Uri fileUri, File imageFile) {
-        SessionService sessionService;
-        sessionService = NetworkProvider.getClient().create(SessionService.class);
-
-        // create RequestBody instance from file
-        RequestBody requestFile =
-                RequestBody.create(
-                        MediaType.parse(getContentResolver().getType(fileUri)),
-                        imageFile
-                );
-
-        // MultipartBody.Part is used to send also the actual file name
-        MultipartBody.Part body =
-                MultipartBody.Part.createFormData("image", imageFile.getName(), requestFile);
-
-        // add another part within the multipart request
-        RequestBody email =
-                RequestBody.create(
-                        okhttp3.MultipartBody.FORM, Signup.getClient().getEmail());
-        RequestBody username =
-                RequestBody.create(
-                        okhttp3.MultipartBody.FORM, Signup.getClient().getUsername());
-        RequestBody password =
-                RequestBody.create(
-                        okhttp3.MultipartBody.FORM, Signup.getClient().getPassword());
-        RequestBody gender =
-                RequestBody.create(
-                        okhttp3.MultipartBody.FORM, String.valueOf(Signup.getClient().getGender()));
-        RequestBody birthdate =
-                RequestBody.create(
-                        okhttp3.MultipartBody.FORM, Signup.getClient().getBirthdate());
-        RequestBody bio =
-                RequestBody.create(
-                        okhttp3.MultipartBody.FORM, Signup.getClient().getBio());
-        RequestBody preference =
-                RequestBody.create(
-                        okhttp3.MultipartBody.FORM, String.valueOf(Signup.getClient().getPreferences()));
-
-        // finally, execute the request
-        Call<SessionDTO> call = sessionService.signup(
-                email,
-                username,
-                password,
-                gender,
-                birthdate,
-                bio,
-                preference,
-                body);
-        call.enqueue(new Callback<SessionDTO>() {
-            @Override
-            public void onResponse(Call<SessionDTO> call,
-                                   Response<SessionDTO> response) {
-                if (response.isSuccessful()) {
-                    SessionDTO sessionDTO = response.body();
-                    sharedPreferences.edit()
-                            .putString("token", sessionDTO.getToken())
-                            .apply();
-                    Intent intent = new Intent(Signup3Activity.this, Home.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(Signup3Activity.this, "Erreur lors de l'enregistrement", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<SessionDTO> call, Throwable t) {
-                Log.d("toz", t.toString());
-                Toast.makeText(Signup3Activity.this, "CA MARCHE PAS", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
 
     @OnClick(R.id.signup2Button)
     void submit() {
@@ -143,7 +70,8 @@ public class Signup3Activity extends AppCompatActivity {
         } else {
             Signup.getClient().setBio(bioEdit.getText().toString());
             Signup.getClient().setPreferences(preferences);
-            signup(Signup.getClient().getFileUri(), Signup.getClient().getImageFile());
+            Intent intent = new Intent(this, Signup4Activity.class);
+            startActivity(intent);
         }
     }
 }

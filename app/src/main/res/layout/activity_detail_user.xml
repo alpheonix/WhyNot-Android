@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:maxHeight="200dp"
+        android:layout_marginTop="50dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -20,7 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/redCharte"
         android:textSize="25sp" />
@@ -29,8 +29,7 @@
         android:id="@+id/activity_detail_user_birthdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="TextView"
+        android:layout_marginTop="20dp"
         android:textAlignment="center"
         android:textColor="@color/redCharte"
         android:textSize="25sp" />
@@ -38,10 +37,9 @@
     <TextView
         android:id="@+id/activity_detail_user_bio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="20dp"
         android:lines="50"
-        android:text="detail ;)"
         android:textAlignment="center"
         android:textColor="@color/blueCharte"
         android:textSize="20sp" />

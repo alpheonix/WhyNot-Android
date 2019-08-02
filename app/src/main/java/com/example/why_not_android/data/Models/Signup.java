@@ -14,6 +14,9 @@ public class Signup {
     private File imageFile;
     private String bio;
     private int preferences;
+    private int film;
+    private int musique;
+    private int activite;
 
     private static Signup signup = null;
 
@@ -22,6 +25,30 @@ public class Signup {
             signup = new Signup();
         }
         return signup;
+    }
+
+    public int getFilm() {
+        return film;
+    }
+
+    public void setFilm(int film) {
+        this.film = film;
+    }
+
+    public int getMusique() {
+        return musique;
+    }
+
+    public void setMusique(int musique) {
+        this.musique = musique;
+    }
+
+    public int getActivite() {
+        return activite;
+    }
+
+    public void setActivite(int activite) {
+        this.activite = activite;
     }
 
     public String getEmail() {

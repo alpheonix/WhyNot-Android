@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Why_not_android</string>
+    <string name="app_name">Why not</string>
     <string name="signup">Signup</string>
     <string name="login">Login</string>
     <string name="adresse_mail">Adresse mail</string>
@@ -23,4 +23,20 @@
     <string name="navigation_drawer_close">Close drawer</string>
     <string name="navigation_drawer_open">Open Drawer</string>
     <string name="home_activity_no_users_found">Aucun profil vous correspondant n\'a été trouvé</string>
+    <string name="film">Film</string>
+    <string name="science_fiction">Sci-Fi</string>
+    <string name="action">Action</string>
+    <string name="fantasie">Fantasie</string>
+    <string name="documantaire">Documantaire</string>
+    <string name="musique">Musique</string>
+    <string name="rock">Rock</string>
+    <string name="rap">Rap</string>
+    <string name="pop">Pop</string>
+    <string name="classique">Classique</string>
+    <string name="activit">Activité</string>
+    <string name="mus_e">Musée</string>
+    <string name="voyage">Voyage</string>
+    <string name="cinema">Cinema</string>
+    <string name="sport">Sport</string>
+    <string name="desinscription">Desinscription</string>
 </resources>

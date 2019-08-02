@@ -20,6 +20,9 @@ public interface EventService {
     @POST("events/register")
     Call<RegisterDTO> register(@Header("x-access-token") String token, @Body RegisterDTO registerDTO);
 
+    @POST("events/usregister")
+    Call<RegisterDTO> unregister(@Header("x-access-token") String token, @Body RegisterDTO registerDTO);
+
     @GET("events/myevents")
     Call<EventsDTO> getMyEvents(@Header("x-access-token") String token);
 }

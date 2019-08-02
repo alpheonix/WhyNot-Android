@@ -103,6 +103,35 @@ public class DetailEvent extends AppCompatActivity {
                     }
                 });
                 return true;
+            case R.id.action_unregister:
+                EventService unregisterService;
+                unregisterService = NetworkProvider.getClient().create(EventService.class);
+                RegisterDTO unregisterDTO = new RegisterDTO(eventId);
+                Call<RegisterDTO> unsessionDTOCall = unregisterService.unregister(SharedPref.getToken(), unregisterDTO);
+                unsessionDTOCall.enqueue(new Callback<RegisterDTO>() {
+                    @Override
+                    public void onResponse(Call<RegisterDTO> call, Response<RegisterDTO> response) {
+                        RegisterDTO sessionDTO = response.body();
+                        if (response.isSuccessful()) {
+                            Intent intent = new Intent(DetailEvent.this, EventList.class);
+                            startActivity(intent);
+                        } else if (response.body() == null) {
+                            try {
+                                JSONObject errorJSON = new JSONObject(response.errorBody().string());
+                                Toast.makeText(DetailEvent.this, errorJSON.getString("error"), Toast.LENGTH_SHORT).show();
+                            } catch (Exception e) {
+                                Log.d("toz", e.toString());
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<RegisterDTO> call, Throwable t) {
+                        Log.d("toz", t.toString());
+                    }
+                });
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

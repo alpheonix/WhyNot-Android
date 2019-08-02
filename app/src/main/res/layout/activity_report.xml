@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
+
     tools:context=".views.Report">
 
     <android.support.v7.widget.Toolbar
@@ -18,7 +20,10 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:adjustViewBounds="true"
             android:foregroundGravity="center_horizontal"
+
+            android:maxHeight="200dp"
             android:src="@drawable/logosansfond" />
     </android.support.v7.widget.Toolbar>
 
@@ -48,13 +53,12 @@
     <android.support.design.widget.TextInputEditText
         android:id="@+id/activity_report_desc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
         android:lines="20"
-        android:text="TextView"
         android:textColor="@color/blueCharte" />
 
     <Button
