@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Why not</string>
     <string name="signup">Signup</string>
-    <string name="login">Login</string>
+    <string name="login">Conexion</string>
     <string name="adresse_mail">Adresse mail</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="valider">Valider</string>
     <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
     <string name="suivant">Suivant</string>
     <string name="photo">Photo</string>
-    <string name="birthdate">Birthdate</string>
+    <string name="birthdate">Date d\'aniversaire</string>
     <string name="date_de_naissance">Date de naissance</string>
     <string name="homme">Homme</string>
     <string name="femme">Femme</string>
@@ -39,4 +39,13 @@
     <string name="cinema">Cinema</string>
     <string name="sport">Sport</string>
     <string name="desinscription">Desinscription</string>
+    <string name="deconexion">Deconexion</string>
+    <string name="compte">Compte</string>
+    <string name="mes_inscriptions">Mes inscriptions</string>
+    <string name="tous_les_v_nements">Tous les événements</string>
+    <string name="v_nements">Événements</string>
+    <string name="profil">Profil</string>
+    <string name="match">Match</string>
+    <string name="accueil">Accueil</string>
+    <string name="modify">Modifier son profil</string>
 </resources>

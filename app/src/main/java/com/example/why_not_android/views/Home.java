@@ -82,7 +82,7 @@ public class Home extends MenuActivity implements NavigationView.OnNavigationIte
         UserService userService;
         userService = NetworkProvider.getClient().create(UserService.class);
         String token = sharedPreferences.getString("token", "");
-
+Log.d("test",token);
         Call<ArrayList<UserDTO>> userDTOCall = userService.getUsers(token);
         userDTOCall.enqueue(new Callback<ArrayList<UserDTO>>() {
             @Override

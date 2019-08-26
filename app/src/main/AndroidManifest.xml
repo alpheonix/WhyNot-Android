@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".views.Signup4Activity"></activity>
+        <activity android:name=".views.ModifyUser"></activity>
+        <activity android:name=".views.Signup4Activity" />
         <activity
             android:name=".views.MatchListActivity"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -7,38 +7,42 @@
         <item
             android:id="@+id/drawer_menu_home"
             android:icon="@drawable/ic_home"
-            android:title="Accueil" />
+            android:title="@string/accueil" />
         <item
             android:id="@+id/drawer_menu_match"
             android:icon="@drawable/ic_match"
-            android:title="Match" />
+            android:title="@string/match" />
 
         <item
             android:id="@+id/drawer_menu_my_profil"
             android:icon="@drawable/ic_my_profil"
-            android:title="Profil" />
+            android:title="@string/profil" />
 
     </group>
 
-    <item android:title="Événements">
+    <item android:title="@string/v_nements">
         <menu>
             <item
                 android:id="@+id/drawer_menu_event"
                 android:icon="@drawable/ic_match"
-                android:title="Tous les événements" />
+                android:title="@string/tous_les_v_nements" />
             <item
                 android:id="@+id/drawer_menu_my_event"
                 android:icon="@drawable/ic_match"
-                android:title="Mes inscriptions" />
+                android:title="@string/mes_inscriptions" />
         </menu>
     </item>
 
-    <item android:title="Compte">
+    <item android:title="@string/compte">
         <menu>
             <item
                 android:id="@+id/drawer_menu_logout"
+                android:icon="@drawable/ic_leave_application"
+                android:title="@string/deconexion" />
+            <item
+                android:id="@+id/drawer_menu_modify"
                 android:icon="@drawable/ic_logout"
-                android:title="Logout" />
+                android:title="@string/modify" />
         </menu>
     </item>
 

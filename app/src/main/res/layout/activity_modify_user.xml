@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+android:orientation="vertical"
+    tools:context=".views.ModifyUser">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/modifyMailLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/adresse_mail"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/modifyMailEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="nassim@hotmail.fr"
+                android:textColor="@color/blueCharte"
+                app:layout_constraintBottom_toTopOf="@id/modifyMailLabel" />
+
+            <TextView
+                android:id="@+id/modifyUsernameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/nom_d_utilisateur"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/modifyUsernameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="nassim"
+                android:textColor="@color/blueCharte" />
+
+            <ImageView
+                android:id="@+id/modifyPhotoImgView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="20dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="250dp" />
+
+            <Button
+                android:id="@+id/modifyPhotoButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/redCharte"
+                android:text="@string/photo"
+                android:textColor="@color/blueCharte" />
+            <TextView
+                android:id="@+id/modifyGenderButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/pr_ference"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/photoButton" />
+
+            <RadioGroup
+                android:id="@+id/modifyradioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/modify3radioButtonHomme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/homme"
+                    android:textColor="@color/blueCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonFemme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/femme"
+                    android:textColor="@color/redCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/les_deux"
+                    android:textColor="@color/cardview_light_background" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/biographie"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/modifyBio"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/blueCharte" />
+
+            <TextView
+                android:id="@+id/modifyFilmTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/film"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/photoButton" />
+
+            <RadioGroup
+                android:id="@+id/modifyradioGroupFilm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonScienceFiction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/science_fiction"
+                    android:textColor="@color/blueCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action"
+                    android:textColor="@color/blueCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonFantasie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fantasie"
+                    android:textColor="@color/blueCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonDocumantaire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/documantaire"
+                    android:textColor="@color/blueCharte" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/modifyMusiqueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/musique"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/photoButton" />
+
+            <RadioGroup
+                android:id="@+id/modifyradioGroupMusique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonRock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rock"
+                    android:textColor="@color/redCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonRap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rap"
+                    android:textColor="@color/redCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonPop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop"
+                    android:textColor="@color/redCharte" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonClassique"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/classique"
+                    android:textColor="@color/redCharte" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/modifyActivitéTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/activit"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/photoButton" />
+
+            <RadioGroup
+                android:id="@+id/modifyActivite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonMusée"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mus_e"
+                    android:textColor="@color/cardview_light_background" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonVoyage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/voyage"
+                    android:textColor="@color/cardview_light_background" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonCinema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cinema"
+                    android:textColor="@color/cardview_light_background" />
+
+                <RadioButton
+                    android:id="@+id/modifyradioButtonSport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sport"
+                    android:textColor="@color/cardview_light_background" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/modifyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/blueCharte"
+                android:text="@string/valider"
+                android:textColor="@color/redCharte" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -61,6 +61,10 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 Intent logout = new Intent(MenuActivity.this, MainActivity.class);
                 startActivity(logout);
                 break;
+            case R.id.drawer_menu_modify:
+                Intent modify = new Intent(MenuActivity.this, ModifyUser.class);
+                startActivity(modify);
+                break;
             default:
                 break;
         }
