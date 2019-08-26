@@ -34,7 +34,6 @@ android:orientation="vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="nassim@hotmail.fr"
                 android:textColor="@color/blueCharte"
                 app:layout_constraintBottom_toTopOf="@id/modifyMailLabel" />
 
@@ -57,7 +56,6 @@ android:orientation="vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="nassim"
                 android:textColor="@color/blueCharte" />
 
             <ImageView
