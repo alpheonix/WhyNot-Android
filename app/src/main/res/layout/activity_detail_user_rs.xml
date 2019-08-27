@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/activity_detail_user_rs_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="1dp" />
+
+    <TextView
+        android:id="@+id/activity_detail_user_rs_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/redCharte"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/activity_detail_user_rs_birthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/redCharte"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/activity_detail_user_rs_bio"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:lines="50"
+        android:textAlignment="center"
+        android:textColor="@color/blueCharte"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/activity_detail_user_rs_twitter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:lines="50"
+        android:textAlignment="center"
+        android:textColor="@color/blueCharte"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/activity_detail_user_rs_insta"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:lines="50"
+        android:textAlignment="center"
+        android:textColor="@color/blueCharte"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/activity_detail_user_rs_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:lines="50"
+        android:textAlignment="center"
+        android:textColor="@color/blueCharte"
+        android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

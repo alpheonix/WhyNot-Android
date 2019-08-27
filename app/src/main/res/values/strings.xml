@@ -48,4 +48,7 @@
     <string name="match">Match</string>
     <string name="accueil">Accueil</string>
     <string name="modify">Modifier son profil</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
 </resources>

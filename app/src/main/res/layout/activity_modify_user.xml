@@ -11,10 +11,12 @@ android:orientation="vertical"
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/modifyMailLabel"
                 android:layout_width="match_parent"
@@ -78,6 +80,7 @@ android:orientation="vertical"
                 android:background="@color/redCharte"
                 android:text="@string/photo"
                 android:textColor="@color/blueCharte" />
+
             <TextView
                 android:id="@+id/modifyGenderButton"
                 android:layout_width="match_parent"
@@ -302,14 +305,74 @@ android:orientation="vertical"
 
             </RadioGroup>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/twitter"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/modifytwitter"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/blueCharte" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/facebook"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/modifyfacebook"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/blueCharte" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/instagram"
+                android:textColor="@color/redCharte"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/modifyinsta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/blueCharte" />
+
             <Button
                 android:id="@+id/modifyButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@color/blueCharte"
                 android:text="@string/valider"
                 android:textColor="@color/redCharte" />

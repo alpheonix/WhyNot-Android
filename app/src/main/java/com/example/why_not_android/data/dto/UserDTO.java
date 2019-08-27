@@ -25,9 +25,39 @@ public class UserDTO {
     private String isDeleted;
     @SerializedName("banned")
     private String banned;
+    @SerializedName("twitter")
+    private String twitter;
+    @SerializedName("insta")
+    private String insta;
+    @SerializedName("facebook")
+    private String facebook;
 
     public  String get_id() {
         return _id;
+    }
+
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public void setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+
+    public String getInsta() {
+        return insta;
+    }
+
+    public void setInsta(String insta) {
+        this.insta = insta;
+    }
+
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
     }
 
     public void set_id(String _id) {

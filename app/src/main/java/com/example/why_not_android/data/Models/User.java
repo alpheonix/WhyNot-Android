@@ -12,9 +12,36 @@ public class User {
     private String createdAt;
     private String isDeleted;
     private String banned;
+    private String twitter;
+    private String insta;
+    private String facebook;
 
     public  String get_id() {
         return _id;
+    }
+
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public void setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+
+    public String getInsta() {
+        return insta;
+    }
+
+    public void setInsta(String insta) {
+        this.insta = insta;
+    }
+
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
     }
 
     public void set_id(String _id) {

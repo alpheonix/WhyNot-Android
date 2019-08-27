@@ -29,6 +29,9 @@ public interface SessionService {
             @Part("film") RequestBody film,
             @Part("activite") RequestBody activite,
             @Part("musique") RequestBody musique,
+            @Part("twitter") RequestBody twitter,
+            @Part("insta") RequestBody insta,
+            @Part("facebook") RequestBody facebook,
             @Part MultipartBody.Part file
     );
 
@@ -42,6 +45,9 @@ public interface SessionService {
             @Part("film") RequestBody film,
             @Part("activite") RequestBody activite,
             @Part("musique") RequestBody musique,
+            @Part("twitter") RequestBody twitter,
+            @Part("insta") RequestBody insta,
+            @Part("facebook") RequestBody facebook,
             @Part MultipartBody.Part file
     );
 }

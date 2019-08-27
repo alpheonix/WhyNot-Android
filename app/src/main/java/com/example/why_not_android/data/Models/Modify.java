@@ -10,6 +10,9 @@ public class Modify {
     private Uri fileUri;
     private File imageFile;
     private String bio;
+    private String twitter;
+    private String insta;
+    private String facebook;
     private int preferences;
     private int film;
     private int musique;
@@ -26,6 +29,30 @@ public class Modify {
 
     public int getFilm() {
         return film;
+    }
+
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public void setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+
+    public String getInsta() {
+        return insta;
+    }
+
+    public void setInsta(String insta) {
+        this.insta = insta;
+    }
+
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
     }
 
     public void setFilm(int film) {

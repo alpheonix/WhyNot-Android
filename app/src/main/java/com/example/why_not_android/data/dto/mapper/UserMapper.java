@@ -27,6 +27,9 @@ public class UserMapper {
         user.setCreatedAt(userDTO.getCreatedAt());
         user.setIsDeleted(userDTO.getIsDeleted());
         user.setPhoto(userDTO.getPhoto());
+        user.setTwitter(userDTO.getTwitter());
+        user.setInsta(userDTO.getInsta());
+        user.setFacebook(userDTO.getFacebook());
         return user;
     }
 }

@@ -53,12 +53,18 @@ public class MatchListActivity extends MenuActivity implements NavigationView.On
         matchAdapter.setItemClickListener(new MatchAdapter.ItemClickListener() {
             @Override
             public void onclick(User user) {
-                Intent intent = new Intent(MatchListActivity.this, DetailUser.class);
+                Log.d("intent",user.getInsta());
+                Log.d("intent",user.getTwitter());
+                Log.d("intent",user.getFacebook());
+                Intent intent = new Intent(MatchListActivity.this, DetailUserRS.class);
                 intent.putExtra("userName", user.getUsername());
                 intent.putExtra("userBio", user.getBio());
                 intent.putExtra("userBirth", user.getBirthdate());
                 intent.putExtra("userPic", user.getPhoto());
                 intent.putExtra("userid", user.get_id());
+                intent.putExtra("userTwitter", user.getTwitter());
+                intent.putExtra("userInsta", user.getInsta());
+                intent.putExtra("userFacebook", user.getFacebook());
                 startActivity(intent);
             }
         });

@@ -61,6 +61,12 @@ public class ModifyUser extends AppCompatActivity {
     RadioGroup filmRadio;
     @BindView(R.id.modifyradioGroupMusique)
     RadioGroup musiqueRadio;
+    @BindView(R.id.modifytwitter)
+    EditText twitter;
+    @BindView(R.id.modifyinsta)
+    EditText insta;
+    @BindView(R.id.modifyfacebook)
+    EditText facebook;
     int film = -1;
     int activite = -1;
     int musique = -1;
@@ -137,6 +143,19 @@ public class ModifyUser extends AppCompatActivity {
     @OnClick(R.id.modifyButton)
     void modifyBtn() {
 
+        String twitterString = twitter.getText().toString();
+        String instaString = insta.getText().toString();
+        String facebookString = facebook.getText().toString();
+
+        if (twitterString.isEmpty()) {
+            twitterString = "";
+        }
+        if (instaString.isEmpty()) {
+            instaString = "";
+        }
+        if(facebookString.isEmpty()){
+            instaString = "";
+        }
         if (!isEmailValid(mailEdit.getText().toString())) {
             Toast.makeText(this, "Email incorrect", Toast.LENGTH_SHORT).show();
         } else if (!isUsernameValid(usernameEdit.getText().toString()) || usernameEdit.getText().toString().length() < 2) {
@@ -153,7 +172,7 @@ public class ModifyUser extends AppCompatActivity {
             Toast.makeText(this, "Selectionner une activité favorite", Toast.LENGTH_SHORT).show();
         } else if(musique == -1){
             Toast.makeText(this, "Selectionner un genre musicale favoris", Toast.LENGTH_SHORT).show();
-        }else{
+        }else {
             Modify.getClient().setEmail(mailEdit.getText().toString());
             Modify.getClient().setUsername(usernameEdit.getText().toString());
             Modify.getClient().setFileUri(fileUri);
@@ -163,6 +182,9 @@ public class ModifyUser extends AppCompatActivity {
             Modify.getClient().setActivite(activite);
             Modify.getClient().setFilm(film);
             Modify.getClient().setMusique(musique);
+            Modify.getClient().setTwitter(twitterString);
+            Modify.getClient().setInsta(instaString);
+            Modify.getClient().setFacebook(facebookString);
             modify(Modify.getClient().getFileUri(), Modify.getClient().getImageFile());
         }
 
@@ -261,6 +283,15 @@ public class ModifyUser extends AppCompatActivity {
         RequestBody musique =
                 RequestBody.create(
                         okhttp3.MultipartBody.FORM, String.valueOf(Modify.getClient().getMusique()));
+        RequestBody twitter =
+                RequestBody.create(
+                        okhttp3.MultipartBody.FORM, Modify.getClient().getTwitter());
+        RequestBody insta =
+                RequestBody.create(
+                        okhttp3.MultipartBody.FORM, Modify.getClient().getInsta());
+        RequestBody facebook =
+                RequestBody.create(
+                        okhttp3.MultipartBody.FORM, Modify.getClient().getFacebook());
         String token = sharedPreferences.getString("token", "");
 
         // finally, execute the request
@@ -273,6 +304,9 @@ public class ModifyUser extends AppCompatActivity {
                 film,
                 activite,
                 musique,
+                twitter,
+                insta,
+                facebook,
                 body);
         call.enqueue(new Callback<SessionDTO>() {
             @Override

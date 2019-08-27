@@ -222,7 +222,7 @@ public class Home extends MenuActivity implements NavigationView.OnNavigationIte
         }
     }
 
-    @OnClick(R.id.activity_home_user_description_tv)
+    @OnClick(R.id.activity_home_iv)
     void detail() {
         Intent intent = new Intent(Home.this, DetailUser.class);
         intent.putExtra("userName", userDTOList.get(0).getUsername());

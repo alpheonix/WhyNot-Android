@@ -17,6 +17,9 @@ public class Signup {
     private int film;
     private int musique;
     private int activite;
+    private String twitter;
+    private String insta;
+    private String facebook;
 
     private static Signup signup = null;
 
@@ -127,6 +130,30 @@ public class Signup {
         return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
     }
 
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public void setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+
+    public String getInsta() {
+        return insta;
+    }
+
+    public void setInsta(String insta) {
+        this.insta = insta;
+    }
+
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
+    }
+
     @Override
     public String toString() {
         return "Signup{" +
@@ -141,4 +168,6 @@ public class Signup {
                 ", preferences='" + preferences + '\'' +
                 '}';
     }
+
+
 }
