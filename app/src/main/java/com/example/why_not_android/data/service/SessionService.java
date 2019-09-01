@@ -49,5 +49,12 @@ public interface SessionService {
             @Part("insta") RequestBody insta,
             @Part("facebook") RequestBody facebook,
             @Part MultipartBody.Part file
+
+    );
+
+    @Multipart
+    @POST("users/modifyPhoto")
+    Call<SessionDTO> modifyPhoto(@Header("x-access-token") String token,
+                            @Part MultipartBody.Part file
     );
 }

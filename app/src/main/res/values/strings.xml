@@ -45,10 +45,11 @@
     <string name="tous_les_v_nements">Tous les événements</string>
     <string name="v_nements">Événements</string>
     <string name="profil">Profil</string>
-    <string name="match">Match</string>
+    <string name="match">Mes Match</string>
     <string name="accueil">Accueil</string>
-    <string name="modify">Modifier son profil</string>
+    <string name="modify">Modifier mon profil</string>
     <string name="twitter">Twitter</string>
     <string name="facebook">Facebook</string>
     <string name="instagram">Instagram</string>
+    <string name="modifier_photo">Modifier sa photo</string>
 </resources>

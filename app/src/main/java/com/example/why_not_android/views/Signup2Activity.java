@@ -25,6 +25,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 import butterknife.BindView;
@@ -72,6 +73,7 @@ public class Signup2Activity extends AppCompatActivity {
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.set(2001, 0, 0);
 
         datePickerDialog = new DatePickerDialog(this, (view, year1, month1, dayOfMonth) -> {
             String format = "dd/MM/yyyy";
@@ -82,7 +84,8 @@ public class Signup2Activity extends AppCompatActivity {
             calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
             birthdateEdt.setText(simpleDateFormat.format(calendar.getTime()));
-        }, year, month, day);
+        }, (year), month, day);
+        datePickerDialog.getDatePicker().setMaxDate(calendar.getTimeInMillis());
     }
 
     public Uri getImageUri(Context inContext, Bitmap inImage) {

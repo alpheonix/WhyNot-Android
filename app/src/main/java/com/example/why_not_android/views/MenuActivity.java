@@ -38,12 +38,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 Intent home = new Intent(MenuActivity.this, Home.class);
                 startActivity(home);
                 break;
-            case R.id.drawer_menu_my_profil:
 
-                Intent intent = new Intent(MenuActivity.this, DetailUser.class);
-
-                startActivity(intent);
-                break;
             case R.id.drawer_menu_event:
                 Intent event = new Intent(MenuActivity.this, EventList.class);
                 startActivity(event);
@@ -60,10 +55,15 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             case R.id.drawer_menu_logout:
                 Intent logout = new Intent(MenuActivity.this, MainActivity.class);
                 startActivity(logout);
+                finish();
                 break;
             case R.id.drawer_menu_modify:
                 Intent modify = new Intent(MenuActivity.this, ModifyUser.class);
                 startActivity(modify);
+                break;
+            case R.id.drawer_menu_modify_photo:
+                Intent modifyPhoto = new Intent(MenuActivity.this, ModifyPhoto.class);
+                startActivity(modifyPhoto);
                 break;
             default:
                 break;

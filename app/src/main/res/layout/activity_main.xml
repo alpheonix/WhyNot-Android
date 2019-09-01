@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".views.MainActivity"
+    android:screenOrientation="portrait"
     android:background="@color/colorPrimary"
     >
 

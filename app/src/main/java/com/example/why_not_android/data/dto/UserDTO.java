@@ -17,6 +17,12 @@ public class UserDTO {
     private String sexe;
     @SerializedName("preference")
     private int preference;
+    @SerializedName("film")
+    private int film;
+    @SerializedName("musique")
+    private int musique;
+    @SerializedName("activite")
+    private int activite;
     @SerializedName("bio")
     private String bio;
     @SerializedName("createdAt")
@@ -42,6 +48,30 @@ public class UserDTO {
 
     public void setTwitter(String twitter) {
         this.twitter = twitter;
+    }
+
+    public int getFilm() {
+        return film;
+    }
+
+    public void setFilm(int film) {
+        this.film = film;
+    }
+
+    public int getMusique() {
+        return musique;
+    }
+
+    public void setMusique(int musique) {
+        this.musique = musique;
+    }
+
+    public int getActivite() {
+        return activite;
+    }
+
+    public void setActivite(int activite) {
+        this.activite = activite;
     }
 
     public String getInsta() {

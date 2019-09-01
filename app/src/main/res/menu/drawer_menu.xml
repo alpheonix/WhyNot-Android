@@ -14,9 +14,13 @@
             android:title="@string/match" />
 
         <item
-            android:id="@+id/drawer_menu_my_profil"
-            android:icon="@drawable/ic_my_profil"
-            android:title="@string/profil" />
+            android:id="@+id/drawer_menu_modify"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/modify" />
+        <item
+            android:id="@+id/drawer_menu_modify_photo"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/modifier_photo" />
 
     </group>
 
@@ -39,10 +43,7 @@
                 android:id="@+id/drawer_menu_logout"
                 android:icon="@drawable/ic_leave_application"
                 android:title="@string/deconexion" />
-            <item
-                android:id="@+id/drawer_menu_modify"
-                android:icon="@drawable/ic_logout"
-                android:title="@string/modify" />
+
         </menu>
     </item>
 

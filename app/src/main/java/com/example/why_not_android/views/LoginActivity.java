@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                             .apply();
                     Intent intent = new Intent(LoginActivity.this, Home.class);
                     startActivity(intent);
+                    finish();
                 } else if (response.body() == null) {
                     try {
                         JSONObject errorJSON = new JSONObject(response.errorBody().string());

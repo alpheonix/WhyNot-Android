@@ -231,5 +231,6 @@ public class Home extends MenuActivity implements NavigationView.OnNavigationIte
         intent.putExtra("userPic", userDTOList.get(0).getPhoto());
         intent.putExtra("userid", userDTOList.get(0).get_id());
         startActivity(intent);
+
     }
 }

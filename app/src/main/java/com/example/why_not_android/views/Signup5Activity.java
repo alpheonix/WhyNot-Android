@@ -16,7 +16,11 @@ import com.example.why_not_android.data.dto.SessionDTO;
 import com.example.why_not_android.data.service.SessionService;
 import com.example.why_not_android.data.service.providers.NetworkProvider;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
+import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -124,15 +128,25 @@ public class Signup5Activity extends AppCompatActivity {
             @Override
             public void onResponse(Call<SessionDTO> call,
                                    Response<SessionDTO> response) {
+                SessionDTO sessionDTO = response.body();
                 if (response.isSuccessful()) {
-                    SessionDTO sessionDTO = response.body();
+
                     sharedPreferences.edit()
                             .putString("token", sessionDTO.getToken())
                             .apply();
                     Intent intent = new Intent(Signup5Activity.this, Home.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(Signup5Activity.this, "Erreur lors de l'enregistrement", Toast.LENGTH_SHORT).show();
+                    JSONObject errorJSON = null;
+                    try {
+                        errorJSON = new JSONObject(response.errorBody().string());
+                        Toast.makeText(Signup5Activity.this, errorJSON.getString("error"), Toast.LENGTH_SHORT).show();
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
                 }
 

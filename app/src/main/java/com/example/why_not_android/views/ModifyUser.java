@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -22,11 +23,14 @@ import com.example.why_not_android.data.Models.Signup;
 import com.example.why_not_android.data.MyPermissions;
 import com.example.why_not_android.data.SharedPreferences.SharedPref;
 import com.example.why_not_android.data.dto.SessionDTO;
+import com.example.why_not_android.data.dto.UserDTO;
 import com.example.why_not_android.data.service.SessionService;
+import com.example.why_not_android.data.service.UserService;
 import com.example.why_not_android.data.service.providers.NetworkProvider;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -67,11 +71,43 @@ public class ModifyUser extends AppCompatActivity {
     EditText insta;
     @BindView(R.id.modifyfacebook)
     EditText facebook;
+
+    @BindView(R.id.modify3radioButtonHomme)
+    RadioButton homme;
+    @BindView(R.id.modifyradioButtonFemme)
+    RadioButton femme;
+    @BindView(R.id.modifyradioButton2)
+    RadioButton les2;
+    @BindView(R.id.modifyradioButtonScienceFiction)
+    RadioButton scifi;
+    @BindView(R.id.modifyradioButtonAction)
+    RadioButton action;
+    @BindView(R.id.modifyradioButtonFantasie)
+    RadioButton fantasie;
+    @BindView(R.id.modifyradioButtonDocumantaire)
+    RadioButton docu;
+    @BindView(R.id.modifyradioButtonPop)
+    RadioButton pop;
+    @BindView(R.id.modifyradioButtonRock)
+    RadioButton rock;
+    @BindView(R.id.modifyradioButtonRap)
+    RadioButton rap;
+    @BindView(R.id.modifyradioButtonClassique)
+    RadioButton classique;
+    @BindView(R.id.modifyradioButtonCinema)
+    RadioButton cinema;
+    @BindView(R.id.modifyradioButtonMusée)
+    RadioButton musee;
+    @BindView(R.id.modifyradioButtonSport)
+    RadioButton sport;
+    @BindView(R.id.modifyradioButtonVoyage)
+    RadioButton voyage;
     int film = -1;
     int activite = -1;
     int musique = -1;
     int preferences = -1;
     private SharedPreferences sharedPreferences;
+    private ArrayList<UserDTO> userDTOList;
 
 
     private MyPermissions myPermissions;
@@ -86,7 +122,7 @@ public class ModifyUser extends AppCompatActivity {
         setContentView(R.layout.activity_modify_user);
         ButterKnife.bind(this);
         sharedPreferences = SharedPref.getInstance(this);
-
+        initModify();
         myPermissions = MyPermissions.getInstance(this);
         prefRadio.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.modify3radioButtonHomme) {
@@ -332,5 +368,101 @@ public class ModifyUser extends AppCompatActivity {
                 Toast.makeText(ModifyUser.this, "CA MARCHE PAS", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void initModify() {
+        UserService userService;
+        userService = NetworkProvider.getClient().create(UserService.class);
+        String token = sharedPreferences.getString("token", "");
+
+        Call<ArrayList<UserDTO>> userDTOCall = userService.getUser(token);
+        userDTOCall.enqueue(new Callback<ArrayList<UserDTO>>() {
+            @Override
+            public void onResponse(Call<ArrayList<UserDTO>> call, Response<ArrayList<UserDTO>> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().size() != 0) {
+                        userDTOList = response.body();
+                        UserDTO userDTO = userDTOList.get(0);
+
+                        mailEdit.setText(userDTO.getEmail());
+                        Log.d("mail",mailEdit.getText().toString());
+                        usernameEdit.setText(userDTO.getUsername());
+                        bioEdit.setText(userDTO.getBio());
+                        twitter.setText(userDTO.getTwitter());
+                        facebook.setText(userDTO.getFacebook());
+                        insta.setText(userDTO.getInsta());
+
+
+                        if (userDTO.getPreference()==0){
+                            homme.setChecked(true);
+                            preferences = 0;
+                        }else if (userDTO.getPreference()==1){
+                            femme.setChecked(true);
+                            preferences = 1;
+                        }else{
+                            les2.setChecked(true);
+                            preferences = 2;
+                        }
+
+                        if (userDTO.getFilm()==0){
+                            scifi.setChecked(true);
+                            film = 0;
+                        }else if (userDTO.getFilm()==1){
+                            action.setChecked(true);
+                            film = 1;
+                        }else if(userDTO.getFilm()==2){
+                            fantasie.setChecked(true);
+                            film = 2;
+                        }else{
+                            docu.setChecked(true);
+                            film = 3;
+                        }
+
+                        if (userDTO.getMusique()==0){
+                            rap.setChecked(true);
+                            musique = 0;
+                        }else if (userDTO.getMusique()==1){
+                            rock.setChecked(true);
+                            musique = 1;
+                        }else if(userDTO.getMusique()==2){
+                            pop.setChecked(true);
+                            musique = 2;
+                        }else{
+                            classique.setChecked(true);
+                            musique = 3;
+                        }
+
+                        if (userDTO.getActivite()==0){
+                            cinema.setChecked(true);
+                            activite = 0;
+                        }else if (userDTO.getActivite()==1){
+                            sport.setChecked(true);
+                            activite = 1;
+                        }else if(userDTO.getActivite()==2){
+                            voyage.setChecked(true);
+                            activite = 2;
+                        }else{
+                            musee.setChecked(true);
+                            activite = 3;
+                        }
+
+                    }
+                } else {
+                    try {
+                        //Return to MainActivity if the user is no longer connected.
+                        //Intent intent = new Intent(Home.this, LoginActivity.class);
+                        //startActivity(intent);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<UserDTO>> call, Throwable t) {
+                Log.d("toz", "CA MARCHE PAS CA MARCHE PAS QUAND JE CLIQUE SUR LE LIEN CA MARCHE PAS");
+            }
+        });
+
     }
 }

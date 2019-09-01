@@ -115,6 +115,11 @@ public class DetailEvent extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             Intent intent = new Intent(DetailEvent.this, EventList.class);
                             startActivity(intent);
+                            finish();
+                            finish();
+                            finish();
+                            finish();
+                            finish();
                         } else if (response.body() == null) {
                             try {
                                 JSONObject errorJSON = new JSONObject(response.errorBody().string());
