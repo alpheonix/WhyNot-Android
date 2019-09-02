@@ -60,10 +60,10 @@ public class DetailEvent extends AppCompatActivity {
         eventId = extras.getString("eventid");
         nameTv.setText(name);
         Glide.with(DetailEvent.this).load(image).into(imageIv);
-        addressTv.setText(address);
-        priceTv.setText(price.toString());
+        addressTv.setText("Adresse: "+address);
+        priceTv.setText("Prix: "+price.toString());
         descTv.setText(desc);
-        dateTv.setText(date);
+        dateTv.setText("Date: "+date);
     }
 
     @Override

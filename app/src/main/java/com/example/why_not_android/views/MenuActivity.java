@@ -61,10 +61,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 Intent modify = new Intent(MenuActivity.this, ModifyUser.class);
                 startActivity(modify);
                 break;
-            case R.id.drawer_menu_modify_photo:
-                Intent modifyPhoto = new Intent(MenuActivity.this, ModifyPhoto.class);
-                startActivity(modifyPhoto);
-                break;
+
             default:
                 break;
         }

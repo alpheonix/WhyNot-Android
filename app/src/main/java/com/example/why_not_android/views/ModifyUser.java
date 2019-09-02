@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.why_not_android.R;
 import com.example.why_not_android.data.Models.Modify;
 import com.example.why_not_android.data.Models.Signup;
@@ -390,6 +391,7 @@ public class ModifyUser extends AppCompatActivity {
                         bioEdit.setText(userDTO.getBio());
                         twitter.setText(userDTO.getTwitter());
                         facebook.setText(userDTO.getFacebook());
+                        Glide.with(ModifyUser.this).load(userDTO.getPhoto()).into(imageView);
                         insta.setText(userDTO.getInsta());
 
 

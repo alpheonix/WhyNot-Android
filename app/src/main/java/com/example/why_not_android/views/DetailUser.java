@@ -43,7 +43,7 @@ public class DetailUser extends AppCompatActivity {
         biotv.setText(bio);
         birthdatetv.setText(birth);
         nametv.setText(name);
-        Glide.with(DetailUser.this).load(image.replace("localhost", "10.0.2.2")).into(imageView);
+        Glide.with(DetailUser.this).load(image).into(imageView);
 
     }
 

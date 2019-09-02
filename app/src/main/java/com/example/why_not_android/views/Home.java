@@ -189,7 +189,7 @@ public class Home extends MenuActivity implements NavigationView.OnNavigationIte
             userDTOList.remove(0);
             UserDTO userDTO = userDTOList.get(0);
             textView.setText(userDTO.getUsername() + "\n" + userDTO.getPreference());
-            Glide.with(Home.this).load(userDTO.getPhoto().replace("localhost", "10.0.2.2")).into(imageView);
+            Glide.with(Home.this).load(userDTO.getPhoto()).into(imageView);
         }
     }
 
