@@ -27,7 +27,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:text="nassim@hotmail.fr"
         android:textColor="@color/blueCharte"
         app:layout_constraintBottom_toTopOf="@id/signupMailLabel" />
 
@@ -50,7 +49,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:text="nassim"
         android:textColor="@color/blueCharte" />
 
     <TextView
@@ -73,7 +71,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:inputType="textPassword"
-        android:text="nassim"
         android:textColor="@color/blueCharte" />
 
     <Button
